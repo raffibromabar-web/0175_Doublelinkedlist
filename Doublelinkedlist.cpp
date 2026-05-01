@@ -69,5 +69,15 @@ public:
             return;
         }
 
+           // Step 8: Insert between current and current->next
+        newnode->next = current->next;
+        newnode->prev = current;    // Step 10
+
+        if (current->next != NULL)
+            current->next->prev = newnode; // Step 11
+
+        current->next = newnode;      // Step 12
+    }
+
     
 };
