@@ -79,5 +79,14 @@ public:
         current->next = newnode;      // Step 12
     }
 
+    void hapus()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+
     
 };
