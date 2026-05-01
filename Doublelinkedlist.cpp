@@ -87,6 +87,10 @@ public:
             return;
         }
 
+        int rollNo;
+        cout << "Enter the roll number of the student whose record is to be deleted: ";
+        cin >> rollNo;
+
 
     
 };
