@@ -103,6 +103,23 @@ public:
             return;
         }
 
+        // Step 2: If node is at the beginning
+        if (current == START)
+        {
+            START = current->next; // Step 3a
+            if (START != NULL)
+                START->prev = NULL; // Step 3b
+        }
+        else
+        {
+            // Step 4: Link previous node to next of current
+            current->prev->next = current->next;
+
+            // Step 5: Link next node to prev of current
+            if (current->next != NULL)
+                current->next->prev = current->prev;
+        }
+
 
     
 };
